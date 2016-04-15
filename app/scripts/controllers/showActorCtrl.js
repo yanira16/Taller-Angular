@@ -1,7 +1,6 @@
 angular.module('angularSpa')
     .controller('showActorCtrl', function($scope, $routeParams, showActorSrv){
         $scope.actors =[];
-        //$scope.actor = $routeParams.actorId;
         function getActor(){
             showActorSrv.getActor($routeParams.actorId)
             .success(function(data){
